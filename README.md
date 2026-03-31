@@ -1,59 +1,144 @@
-# Term-Deposit-Marketing
-**Background**:
+# 📊 Term Deposit Marketing Campaign Success Prediction
 
-We are a small startup focusing mainly on providing machine learning solutions in the European banking market. We work on a variety of problems including fraud detection, sentiment classification and customer intention prediction and classification.
+## 🚀 Project Overview
 
-We are interested in developing a robust machine learning system that leverages information coming from call center data.
+This project focuses on developing a **robust machine learning system** to improve the success rate of direct marketing campaigns for a European banking institution.
 
-Ultimately, we are looking for ways to improve the success rate for calls made to customers for any product that our clients offer. Towards this goal we are working on designing an ever evolving machine learning product that offers high success outcomes while offering interpretability for our clients to make informed decisions.
+The primary goal is to **predict whether a customer will subscribe to a term deposit** using demographic, financial, and campaign-related attributes. Beyond prediction, this project emphasizes **business impact** by enabling data-driven decision-making, optimizing marketing strategies, and identifying high-potential customers.
 
-**Data Description**:
+---
 
-The data comes from direct marketing efforts of a European banking institution. The marketing campaign involves making a phone call to a customer, often multiple times to ensure a product subscription, in this case a term deposit. Term deposits are usually short-term deposits with maturities ranging from one month to a few years. The customer must understand when buying a term deposit that they can withdraw their funds only after the term ends. All customer information that might reveal personal information is removed due to privacy concerns.
+## 📁 Data Description
 
-**Attributes**:
+The dataset contains customer information collected through direct marketing campaigns, primarily via phone calls.
 
-age : age of customer (numeric)
+### Key Features
 
-job : type of job (categorical)
+- **age** – Age of the customer (numeric)  
+- **job** – Type of job (categorical)  
+- **marital** – Marital status (categorical)  
+- **education** – Educational background (categorical)  
+- **default** – Has credit in default? (binary)  
+- **balance** – Average yearly balance in euros (numeric)  
+- **housing** – Has a housing loan? (binary)  
+- **loan** – Has a personal loan? (binary)  
+- **contact** – Contact communication type (categorical)  
+- **day** – Last contact day of the month (numeric)  
+- **month** – Last contact month of the year (categorical)  
+- **duration** – Last contact duration in seconds (numeric)  
+- **campaign** – Number of contacts performed during this campaign (numeric)  
+- **y** – Target variable: subscription to term deposit (Yes/No)  
 
-marital : marital status (categorical)
+---
 
-education (categorical)
+## 🎯 Business Objective
 
-default: has credit in default? (binary)
+The core objective of this project goes beyond prediction and focuses on **business optimization**.
 
-balance: average yearly balance, in euros (numeric)
+### Goals
 
-housing: has a housing loan? (binary)
+- Predict whether a customer will subscribe to a term deposit  
+- Identify **high-conversion customer segments**  
+- Reduce unnecessary marketing efforts by targeting **high-value leads**  
+- Improve overall **campaign efficiency and ROI**  
+- Provide **actionable insights** for stakeholders  
 
-loan: has personal loan? (binary)
+### Business Problem
 
-contact: contact communication type (categorical)
+> **How can we maximize conversions while minimizing cost and effort?**
 
-day: last contact day of the month (numeric)
+---
 
-month: last contact month of year (categorical)
+## 🔄 Project Workflow
 
-duration: last contact duration, in seconds (numeric)
+### 1️⃣ Data Understanding & Exploration
 
-campaign: number of contacts performed during this campaign and for this client (numeric, includes last contact)
+The initial phase focused on exploring the dataset to understand its structure and patterns.
 
-Output (desired target):
+#### Key Findings
 
-y - has the client subscribed to a term deposit? (binary)
+- Strong class imbalance:
+  - **92.76% → No subscription**
+  - **7.24% → Subscription**
+- Right-skewed distributions in:
+  - `balance`
+  - `duration`
+  - `campaign`
+- Presence of outliers in financial and interaction features  
+- Diverse categorical distributions across:
+  - Job  
+  - Education  
+  - Marital status  
 
+This step helped form **initial hypotheses** about customer behavior and guided further analysis.
 
-**Goal**(s):
+---
 
-Predict if the customer will subscribe (yes/no) to a term deposit (variable y)
+### 2️⃣ Data Preprocessing
 
-**Success Metric**(s):
+To prepare the data for modeling, several preprocessing steps were applied:
 
-Hit %81 or above accuracy by evaluating with 5-fold cross validation and reporting the average performance score.
+- Handled missing values and **‘unknown’ categories**  
+- Encoded categorical variables using appropriate techniques  
+- Scaled/normalized numerical features where necessary  
+- Addressed class imbalance using:
+  - Oversampling  
+  - Undersampling  
+- Created derived features such as:
+  - **Age groups** for better interpretability  
 
-**Current Challenges**:
+These steps ensured the dataset was **clean, structured, and ready for modeling**.
 
-We are also interested in finding customers who are more likely to buy the investment product. Determine the segment(s) of customers our client should prioritize.
+---
 
-What makes the customers buy? Tell us which feature we should be focusing more on.
+### 3️⃣ Exploratory Data Analysis (EDA)
+
+EDA was conducted to uncover relationships between features and the target variable.
+
+#### Key Insights
+
+- Customers with **higher balances** are more likely to subscribe  
+- **Call duration** strongly correlates with subscription  
+  - ⚠️ Not usable for pre-call prediction  
+- Customers contacted **fewer times** show higher conversion rates  
+- Certain months (e.g., **March, October**) yield better campaign outcomes  
+- Features such as:
+  - Job  
+  - Education  
+  - Marital status  
+  - Loan status  
+  significantly influence customer behavior  
+
+EDA provided both **statistical and visual insights**, forming the foundation for modeling and business recommendations.
+
+---
+
+## 📌 Summary
+
+This project demonstrates how machine learning can transform traditional marketing campaigns into **targeted, efficient, and data-driven systems**.
+
+By leveraging customer data effectively, businesses can:
+- Improve conversion rates  
+- Reduce unnecessary outreach  
+- Optimize resource allocation  
+- Make better strategic decisions  
+
+---
+
+## 👨‍💻 Author
+
+**Rinal Patel**  
+📍 Houston, TX  
+
+- 🔗 LinkedIn: https://www.linkedin.com/in/rinalpatel-datascientist  
+- 💻 GitHub: https://github.com/Rinalpatel21  
+
+---
+
+## ⭐ Final Note
+
+This project highlights the ability to:
+- Translate business problems into machine learning solutions  
+- Perform end-to-end data analysis and modeling  
+- Generate actionable business insights  
+- Build practical, real-world deployable models  
