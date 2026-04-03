@@ -104,10 +104,7 @@ EDA was conducted to uncover relationships between features and the target varia
   - Marital status  
   - Loan status  
   significantly influence customer behavior
-<img width="700" height="500" alt="image" src="https://github.com/user-attachments/assets/ec2e2fa5-8f26-4047-ac62-3ff505ea3108" />
 
-
----
 ## Project Approaches
 
 ### Approach 1: Full Feature Model
@@ -138,7 +135,8 @@ EDA was conducted to uncover relationships between features and the target varia
 **Key Outcomes:**
 - LightGBM and CatBoost achieved higher recall, capturing more potential subscribers, while XGBoost offered higher precision.
 - Gain curve analysis demonstrated that targeting the top 20% of customers, as identified by LightGBM, could capture approximately 49% of all actual subscribers.
-- Lift curve analysis demonstrated that a lift of 5 at the 'top 10% of targeted population' means finding 5 times more actual subscribers than random selection, significantly reducing wasted marketing efforts.
+- Lift curve analysis demonstrated that a lift of 5 at the 'top 10% of targeted population' means finding 5 times more actual subscribers than random selection, significantly reducing wasted marketing efforts.<img width="700" height="500" alt="image" src="https://github.com/user-attachments/assets/79fa5eb7-2bce-45e7-995d-41b34be8cb11" />
+<img width="700" height="500" alt="image" src="https://github.com/user-attachments/assets/d40a8ec2-3d79-4014-a21e-500173fc1083" />
 - Important features for pre-call prediction included 'balance', 'age', 'job', 'marital', 'education', 'contact_type', 'month', and 'day'.
 - Campaigns during high-performing months (e.g., March, April, October) significantly increased effectiveness.
 
@@ -175,16 +173,9 @@ EDA was conducted to uncover relationships between features and the target varia
     - **Cluster 1: The Young, Responsive, and Efficient Subscribers** (Youngest, good balances for their age, professional roles, quick decision-makers).
     - **Cluster 2: The Mature, Affluent, and Confident Investors** (Oldest and wealthiest, often retired/senior management, high balances, low loan burden, convert easily).
 - These segment profiles enable the development of tailored messaging, channel strategies, and timing for future marketing efforts.
-  <img width="700" height="500" alt="image" src="https://github.com/user-attachments/assets/79fa5eb7-2bce-45e7-995d-41b34be8cb11" />
-  <img width="700" height="500" alt="image" src="https://github.com/user-attachments/assets/d40a8ec2-3d79-4014-a21e-500173fc1083" />
-  <img width="700" height="500" alt="image" src="https://github.com/user-attachments/assets/300facbe-4773-4b27-83e9-914c7a8ba02b" />
+   <img width="700" height="500" alt="image" src="https://github.com/user-attachments/assets/300facbe-4773-4b27-83e9-914c7a8ba02b" />
   <img width="700" height="500" alt="image" src="https://github.com/user-attachments/assets/2aba0576-5cba-4281-a5a0-508f0cc62f75" />
   <img width="700" height="500" alt="image" src="https://github.com/user-attachments/assets/b533d5d5-3611-4f86-8955-21cf33b0b9bb" />
-
-
-
-
-
 
 ## Model Evaluation Metrics
 
@@ -225,22 +216,21 @@ EDA was conducted to uncover relationships between features and the target varia
 ### Target High-Value Customer Segments
 Focus marketing efforts on **older customers, financially stable professions, and low-debt individuals** to maximize conversion probability and campaign ROI.
 
----
+
 
 ### Optimize Campaign Timing
 Strategically launch campaigns during **high-performing months (March, April, October)** to leverage seasonal trends and improve response rates.
 
----
+
 
 ### Implement Predictive Targeting (LightGBM)
 Deploy a **LightGBM model** to score and rank customers based on conversion probability, enabling **data-driven prioritization of high-value leads before outreach**.
 
----
+
 
 ### Combine Customer Profiling + Campaign Timing
 Integrate **customer segmentation insights with seasonal trends** to maximize conversions instead of relying on broad, untargeted campaigns.
 
----
 
 ### Develop Segment-Specific Messaging
 Create **data-driven communication strategies**:
@@ -248,14 +238,14 @@ Create **data-driven communication strategies**:
 - Use **fast, digital-first messaging** for younger, quick-converting segments  
 - Use **premium, personalized messaging** for high-value and affluent customers  
 
----
+
 
 ### Optimize Outreach Strategy
 - Prioritize **cellular communication channels** for higher engagement  
 - Avoid excessive contact attempts to prevent reduced conversion rates  
 - Focus on **quality over quantity in outreach efforts**  
 
----
+
 
 ### Continuous Model Monitoring & Improvement
 - Monitor model performance using key metrics  
@@ -279,14 +269,14 @@ By leveraging customer data effectively, businesses can:
 ## Author
 
 **Rinal Patel**  
-📍 Houston, TX  
+Houston, TX  
 
-- 🔗 LinkedIn: https://www.linkedin.com/in/rinalpatel-datascientist  
-- 💻 GitHub: https://github.com/Rinalpatel21  
+- LinkedIn: https://www.linkedin.com/in/rinalpatel-datascientist  
+- GitHub: https://github.com/Rinalpatel21  
 
 ---
 
-## ⭐ Final Note
+## Final Note
 
 This project highlights the ability to:
 - Translate business problems into machine learning solutions  
