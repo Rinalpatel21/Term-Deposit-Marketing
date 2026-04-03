@@ -61,9 +61,9 @@ The initial phase focused on exploring the dataset to understand its structure a
   - **92.76% → No subscription**
   - **7.24% → Subscription**
 - Right-skewed distributions in:
-  - `balance`
-  - `duration`
-  - `campaign`
+  - balance
+  - duration
+  - campaign
 - Presence of outliers in financial and interaction features  
 - Diverse categorical distributions across:
   - Job  
@@ -75,10 +75,11 @@ The initial phase focused on exploring the dataset to understand its structure a
 
 To prepare the data for modeling, several preprocessing steps were applied:
 
-- Handled missing values and **‘unknown’ categories**  
+- Handled missing values  
 - Encoded categorical variables using appropriate techniques  
 - Scaled/normalized numerical features where necessary  
 - Addressed class imbalance using:
+  - class weight
   - Oversampling  
   - Undersampling  
 - Created derived features such as:
@@ -95,9 +96,9 @@ EDA was conducted to uncover relationships between features and the target varia
 #### Key Insights
 
 - Customers with **higher balances** are more likely to subscribe  
-- **Call duration** strongly correlates with subscription  <img width="700" height="500" alt="image" src="https://github.com/user-attachments/assets/ec2e2fa5-8f26-4047-ac62-3ff505ea3108" />
+- **Call duration** of the last contact is a highly influential factor. Longer call durations are strongly associated with term deposit subscriptions.  <img width="700" height="400" alt="image" src="https://github.com/user-attachments/assets/ec2e2fa5-8f26-4047-ac62-3ff505ea3108" />
 - Customers contacted **fewer times** show higher conversion rates  
-- Certain months (e.g., **March, October**) yield better campaign outcomes  
+- Certain months (e.g., **March, October**) yield better campaign outcomes  <img width="700" height="400" alt="image" src="https://github.com/user-attachments/assets/68d7b280-9f4d-4071-bf96-fd9bf4c5e4c8" />
 - Features such as:
   - Job  
   - Education  
@@ -114,7 +115,7 @@ EDA was conducted to uncover relationships between features and the target varia
 **Methodology:**
 - Initial data exploration and preprocessing (handling categorical variables, checking for missing values, outlier analysis).
 - Training and evaluating various classification models (Bagging, Random Forest, GBM, AdaBoost, Decision Tree, XGBoost) with and without class weighting, using undersampled data, oversampled data to address class imbalance.
-- Hyperparameter tuning for top-performing models (Random Forest, GBM, XGBoost) using `RandomizedSearchCV` with `recall` as the primary scoring metric.
+- Hyperparameter tuning for top-performing models (Random Forest, GBM, XGBoost) using RandomizedSearchCV with recall as the primary scoring metric.
 
 **Key Outcomes:**
 - The full-feature model achieved the highest predictive performance, with XGBoost and Random Forest (tuned) emerging as the best-performing models.
@@ -127,7 +128,7 @@ EDA was conducted to uncover relationships between features and the target varia
 **Goal:** To build a practical model that can predict term deposit subscriptions before any customer contact, by excluding the 'duration' feature. This model uses features known prior to contacting the customer (demographic, financial, and some campaign-related variables like contact type and month) enabling more efficient targeting, seasonality and better allocation of marketing resources.
 
 **Methodology:**
-- Removed the `duration` feature from the dataset.
+- Removed the duration feature from the dataset.
 - Retrained and re-tuned top-performing models (XGBoost, LightGBM, CatBoost) on the modified dataset.
 - Evaluated performance using recall and precision metrics on training and validation sets.
 - Performed Gain and Lift analysis to assess the model's business impact in targeting potential subscribers.
@@ -135,8 +136,9 @@ EDA was conducted to uncover relationships between features and the target varia
 **Key Outcomes:**
 - LightGBM and CatBoost achieved higher recall, capturing more potential subscribers, while XGBoost offered higher precision.
 - Gain curve analysis demonstrated that targeting the top 20% of customers, as identified by LightGBM, could capture approximately 49% of all actual subscribers.
-- Lift curve analysis demonstrated that a lift of 5 at the 'top 10% of targeted population' means finding 5 times more actual subscribers than random selection, significantly reducing wasted marketing efforts.<img width="700" height="500" alt="image" src="https://github.com/user-attachments/assets/79fa5eb7-2bce-45e7-995d-41b34be8cb11" />
-<img width="700" height="500" alt="image" src="https://github.com/user-attachments/assets/d40a8ec2-3d79-4014-a21e-500173fc1083" />
+- Lift curve analysis demonstrated that a lift of 5 at the 'top 10% of targeted population' means finding 5 times more actual subscribers than random selection, significantly reducing wasted marketing efforts.
+  <img width="700" height="500" alt="image" src="https://github.com/user-attachments/assets/79fa5eb7-2bce-45e7-995d-41b34be8cb11" />
+  <img width="700" height="500" alt="image" src="https://github.com/user-attachments/assets/d40a8ec2-3d79-4014-a21e-500173fc1083" />
 - Important features for pre-call prediction included 'balance', 'age', 'job', 'marital', 'education', 'contact_type', 'month', and 'day'.
 - Campaigns during high-performing months (e.g., March, April, October) significantly increased effectiveness.
 
@@ -274,12 +276,4 @@ Houston, TX
 - LinkedIn: https://www.linkedin.com/in/rinalpatel-datascientist  
 - GitHub: https://github.com/Rinalpatel21  
 
----
 
-## Final Note
-
-This project highlights the ability to:
-- Translate business problems into machine learning solutions  
-- Perform end-to-end data analysis and modeling  
-- Generate actionable business insights  
-- Build practical, real-world deployable models  
