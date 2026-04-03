@@ -95,7 +95,7 @@ EDA was conducted to uncover relationships between features and the target varia
 #### Key Insights
 
 - Customers with **higher balances** are more likely to subscribe  
-- **Call duration** strongly correlates with subscription  
+- **Call duration** strongly correlates with subscription  <img width="700" height="500" alt="image" src="https://github.com/user-attachments/assets/ec2e2fa5-8f26-4047-ac62-3ff505ea3108" />
 - Customers contacted **fewer times** show higher conversion rates  
 - Certain months (e.g., **March, October**) yield better campaign outcomes  
 - Features such as:
