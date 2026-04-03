@@ -173,7 +173,7 @@ EDA was conducted to uncover relationships between features and the target varia
     - **Cluster 1: The Young, Responsive, and Efficient Subscribers** (Youngest, good balances for their age, professional roles, quick decision-makers).
     - **Cluster 2: The Mature, Affluent, and Confident Investors** (Oldest and wealthiest, often retired/senior management, high balances, low loan burden, convert easily).
 - These segment profiles enable the development of tailored messaging, channel strategies, and timing for future marketing efforts.
-  <img width="1033" height="678" alt="image" src="https://github.com/user-attachments/assets/d40a8ec2-3d79-4014-a21e-500173fc1083" />
+  <img width="500" height="400" alt="image" src="https://github.com/user-attachments/assets/d40a8ec2-3d79-4014-a21e-500173fc1083" />
 
 
 
