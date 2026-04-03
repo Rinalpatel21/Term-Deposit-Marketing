@@ -103,7 +103,9 @@ EDA was conducted to uncover relationships between features and the target varia
   - Education  
   - Marital status  
   - Loan status  
-  significantly influence customer behavior  
+  significantly influence customer behavior
+<img width="700" height="500" alt="image" src="https://github.com/user-attachments/assets/ec2e2fa5-8f26-4047-ac62-3ff505ea3108" />
+
 
 ---
 ## Project Approaches
@@ -173,7 +175,14 @@ EDA was conducted to uncover relationships between features and the target varia
     - **Cluster 1: The Young, Responsive, and Efficient Subscribers** (Youngest, good balances for their age, professional roles, quick decision-makers).
     - **Cluster 2: The Mature, Affluent, and Confident Investors** (Oldest and wealthiest, often retired/senior management, high balances, low loan burden, convert easily).
 - These segment profiles enable the development of tailored messaging, channel strategies, and timing for future marketing efforts.
+  <img width="700" height="500" alt="image" src="https://github.com/user-attachments/assets/79fa5eb7-2bce-45e7-995d-41b34be8cb11" />
   <img width="700" height="500" alt="image" src="https://github.com/user-attachments/assets/d40a8ec2-3d79-4014-a21e-500173fc1083" />
+  <img width="700" height="500" alt="image" src="https://github.com/user-attachments/assets/300facbe-4773-4b27-83e9-914c7a8ba02b" />
+  <img width="700" height="500" alt="image" src="https://github.com/user-attachments/assets/2aba0576-5cba-4281-a5a0-508f0cc62f75" />
+  <img width="700" height="500" alt="image" src="https://github.com/user-attachments/assets/b533d5d5-3611-4f86-8955-21cf33b0b9bb" />
+
+
+
 
 
 
