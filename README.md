@@ -10,8 +10,6 @@ The primary goal is to **predict whether a customer will subscribe to a term dep
 
 ## Data Description
 
-The dataset contains customer information collected through direct marketing campaigns, primarily via phone calls.
-
 ### Key Features
 
 - **age** – Age of the customer (numeric)  
